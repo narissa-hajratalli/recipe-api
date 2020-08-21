@@ -1,4 +1,6 @@
 class CategoryController < ApplicationController
+  before_action :authorized
+
   # GET - get all categories
   def index
     @category_list = Category.all

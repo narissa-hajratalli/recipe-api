@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :authorized
+
   # INDEX - Get all recipes
   def index
     @recipe_list = Recipe.where(category_id: params[:category_id])
